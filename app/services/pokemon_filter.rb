@@ -26,7 +26,7 @@ class PokemonFilter
 
   def append_trainer(scope)
     if trainer_name.present?
-      scope = scope.joins(:trainer).where(trainer: { name: trainer_name })
+      scope = scope.joins(:trainer).where(trainers: { name: trainer_name })
     end
     scope
   end
