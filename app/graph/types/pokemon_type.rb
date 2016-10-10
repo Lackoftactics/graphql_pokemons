@@ -7,6 +7,6 @@ PokemonType = GraphQL::ObjectType.define do
   field :level, types.Int, 'Level of pokemon'
   field :location, types.String, "Location of pokemon"
 
-  #field :skills, SkillType, "Skills owned by this pokemon"
-  #field :trainer, TrainerType, "Owner of this pokemon"
+  field :skills, SkillType.to_list_type, "Skills owned by this pokemon"
+  field :trainer, TrainerType, "Owner of this pokemon"
 end
