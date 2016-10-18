@@ -34,6 +34,8 @@ end
 end
 
 thunder_bolt = Skill.create(name: 'thunder_bolt')
+lightning = Skill.create(name: 'Lightning')
+PokemonSkill.create(pokemon: pikachu ,skill: lightning)
 PokemonSkill.create(pokemon: pikachu, skill: thunder_bolt)
 
 
