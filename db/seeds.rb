@@ -17,7 +17,7 @@ ActiveRecord::Base.transaction do
   end
 end
 
-ash = Trainer.create(name: 'Ash')
+ash = Trainer.create(name: 'Ash Ketchum', number_of_pokeballs: 0, description: 'I have my own tv series so I must be good')
 ash.pokemons << pikachu
 
 misty = Trainer.create(name: 'Misty')

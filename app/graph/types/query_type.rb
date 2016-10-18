@@ -2,6 +2,14 @@ QueryType = GraphQL::ObjectType.define do
   name "Query"
   description "The query root of this schema. See available queries."
 
+
+  field :me do
+    type TrainerType
+    description 'Who am I?'
+    resolve -> (obj, args, ctx) {
+      Trainer.first
+    }
+  end
   # Get Pokemons by name
   field :pokemons do
     type PokemonType.to_list_type
