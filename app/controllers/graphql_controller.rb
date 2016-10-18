@@ -5,7 +5,7 @@ class GraphqlController < ApplicationController
   end
 
   def create
-    schema = GraphQL::Schema.new(query: QueryType)
+    schema = GraphQL::Schema.new(query: QueryType, mutation: MutationRoot)
     result = schema.execute(params[:query])
 
     render json: result
